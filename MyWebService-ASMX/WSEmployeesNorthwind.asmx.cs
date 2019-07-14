@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Data;
 using System.Web.Services;
 
 namespace MyWebService_ASMX
@@ -16,11 +13,11 @@ namespace MyWebService_ASMX
     // [System.Web.Script.Services.ScriptService]
     public class WSEmployeesNorthwind : System.Web.Services.WebService
     {
-
+        DataEmployeesModel dataEmployess = new DataEmployeesModel();
         [WebMethod]
-        public string HelloWorld()
+        public DataSet GetSomeEmployees()
         {
-            return "Hello World";
+            return dataEmployess.GetEmployees();
         }
     }
 }

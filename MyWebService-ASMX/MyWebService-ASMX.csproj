@@ -68,9 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <Content Include="WSEmployeesNorthwind.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataEmployees.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WSEmployeesNorthwind.asmx.cs">
+      <DependentUpon>WSEmployeesNorthwind.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
